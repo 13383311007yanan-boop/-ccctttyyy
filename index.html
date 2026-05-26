@@ -1193,10 +1193,10 @@
                 div.style.height = photoSize + 'px';
                 div.style.transitionDelay = (i * 0.025) + 's';
 
-                div.innerHTML = `<img src="生日照片/${photo}" alt="回忆" loading="lazy" onerror="this.parentElement.style.display='none'">`;
+                div.innerHTML = `<img src="生日视频/生日照片/${photo}" alt="回忆" loading="lazy" onerror="this.parentElement.style.display='none'">`;
 
                 div.addEventListener('click', () => {
-                    openLightboxImg(`生日照片/${photo}`);
+                    openLightboxImg(`生日视频/生日照片/${photo}`);
                 });
 
                 wrapper.appendChild(div);
@@ -1229,7 +1229,7 @@
                     item.className = 'bg-photo-item';
                     const rot = rotations[Math.floor(Math.random() * rotations.length)];
                     item.style.setProperty('--rot', rot + 'deg');
-                    item.innerHTML = `<img src="生日照片/${photo}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">`;
+                    item.innerHTML = `<img src="生日视频/生日照片/${photo}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">`;
                     track.appendChild(item);
                 });
 
@@ -1248,12 +1248,12 @@
                 thumb.style.transitionDelay = (i * 0.15) + 's';
 
                 thumb.innerHTML = `
-                    <video src="生日照片/${video}" muted preload="metadata"></video>
+                    <video src="生日视频/生日照片/${video}" muted preload="metadata"></video>
                     <div class="play-overlay"><div class="play-overlay-icon"></div></div>
                 `;
 
                 thumb.addEventListener('click', () => {
-                    openLightboxVideo(`生日照片/${video}`);
+                    openLightboxVideo(`生日视频/生日照片/${video}`);
                 });
 
                 row.appendChild(thumb);
@@ -1279,7 +1279,7 @@
         }
 
         function playCenterVideo() {
-            openLightboxVideo('生日照片/居中视频.mp4');
+            openLightboxVideo('生日视频/生日照片/居中视频.mp4');
         }
 
         function closeLightbox() {
